@@ -1,0 +1,36 @@
+.about-band {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .about-band { grid-template-columns: 0.9fr 1.1fr; align-items: stretch; }
+}
+
+.about-photo {
+  background: linear-gradient(180deg, rgba(124,153,255,.12), rgba(55,48,163,.18));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+}
+.about-img {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px rgba(124,153,255,.18);
+}
+
+.about-copy p { margin: 0 0 10px; line-height: 1.65; }
+.about-copy b { color: var(--accent-2); font-weight: 800; }
+.about-link {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.about-link:hover { filter: brightness(1.15); }
+.about-link:active { filter: brightness(1.05); }

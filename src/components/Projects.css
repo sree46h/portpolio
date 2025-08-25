@@ -1,0 +1,108 @@
+/* Grid */
+.proj-grid { display: grid; gap: 30px; }
+@media (min-width: 900px){
+  .proj-grid { grid-template-columns: 1fr 1fr; } /* two per row on desktop */
+}
+
+/* Mobile single-card pager */
+.proj-grid--mobile > .proj-card { display: none; }
+.proj-grid--mobile > .proj-card.active { display: block; }
+
+.proj-controls-mobile {
+  margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 10px;
+}
+.icon-btn {
+  background: transparent; border: 1px solid var(--border); border-radius: 10px;
+  width: 42px; height: 38px; display: inline-flex; align-items:center; justify-content:center;
+  color: var(--text); transition: transform .12s, border-color .12s;
+}
+.icon-btn:hover { transform: translateY(-1px); border-color: var(--ring); }
+.proj-index { color: var(--muted); }
+
+/* Card */
+.proj-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 25px;
+}
+.proj-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.proj-card-title { margin: 0; font-weight: 900; font-size: 1.05rem; }
+
+/* Links */
+.proj-links { display: flex; gap: 8px; }
+.proj-link {
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 4px 8px;
+  color: var(--text); text-decoration: none;
+}
+.proj-link:hover { border-color: var(--ring); }
+
+/* Tech tags */
+.proj-tech { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.proj-tag {
+  border: 1px solid var(--border);
+  border-radius: 999px; padding: 2px 8px;
+  font-size: .9rem; color: var(--muted);
+}
+
+/* Info */
+.proj-info h4 { margin: 8px 0 4px; font-size: 1rem; font-weight: 800; }
+
+/* Hover card (desktop only) — anchored LEFT-BOTTOM */
+.roles-pop{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: min(360px, 80vw);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 5;
+}
+.roles-pop::before{
+  content: "";
+  position: absolute;
+  left: 18px; /* arrow near the left edge */
+  bottom: -6px;
+  width: 10px; height: 10px;
+  background: var(--card);
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transform: rotate(45deg);
+}
+.proj-card:hover .roles-pop{
+  opacity: 1;
+  transform: translateY(0);
+}
+.roles-pop-title{
+  font-weight: 800; font-size: .95rem; margin-bottom: 6px;
+}
+
+/* truncate & wrap long lists nicely */
+.roles-pop-list{
+  margin: 0; padding-left: 18px;
+  list-style: disc; line-height: 1.25;
+  overflow: hidden;
+  max-height: 160px;                 /* medium size */
+  display: -webkit-box;
+  -webkit-line-clamp: 10;            /* clamp ~10 lines total */
+  -webkit-box-orient: vertical;
+}
+.roles-pop-list li{
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* disable hover card on mobile */
+@media (max-width: 900px){
+  .roles-pop{ display: none; }
+}

@@ -1,0 +1,58 @@
+/* 
+  
+  .experience-container {
+    padding: 20px;
+  }
+  
+  
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .company-section {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1e1e1e; 
+  }
+  
+  .company-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .role-duration {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  .project-title {
+    color: #ffeb3b; 
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+  }
+  
+  .project-info {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .responsibilities-list {
+ 
+    padding-left: 0;
+    margin: 0;
+  }
+   */
+   .project-info{
+    display:flex;
+    flex-wrap: wrap;
+    padding:0;
+   }

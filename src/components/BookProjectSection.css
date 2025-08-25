@@ -1,0 +1,200 @@
+/* ===== Base ===== */
+.proj-section {
+  color: #fff;          /* content white */
+  background: #000;     /* pure black background */
+  padding: 1.25rem;
+}
+
+.proj-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.proj-title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Grid ===== */
+/* Mobile: single column (book style handled via visibility rules below) */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Desktop: 2 cards per row */
+@media (min-width: 1024px) {
+  .proj-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ===== Card ===== */
+.proj-card {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(0, 150, 255, 0.55);  /* colored border */
+  border-radius: 16px;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.proj-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.proj-card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.proj-links {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  text-decoration: none;
+  color: #cdd9ff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(205, 217, 255, 0.25);
+  transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+}
+
+.proj-link:hover {
+  transform: translateY(-1px);
+  background: rgba(205, 217, 255, 0.08);
+  border-color: rgba(205, 217, 255, 0.45);
+}
+
+.proj-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.proj-tag {
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 150, 255, 0.4);
+  color: #eaeaff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 150, 255, 0.12);
+}
+
+.proj-info h4 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.95rem;
+  color: #b8c1ff;
+  font-weight: 700;
+}
+
+.proj-info p {
+  margin: 0;
+  line-height: 1.6;
+  color: #f2f2f7;
+}
+
+/* ===== Mobile "book style" visibility ===== */
+/* On mobile, show only the active card (single project at a time). */
+@media (max-width: 1023.98px) {
+  .proj-grid .proj-card { display: none; }
+  .proj-grid .proj-card.active { display: block; }
+}
+
+/* ===== Mobile controls below the card ===== */
+.proj-controls-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* centered below card */
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 1.35rem;
+  border-radius: 10px;
+  width: 42px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+.icon-btn:hover {
+  color: #0096ff;
+  border-color: rgba(0, 150, 255, 0.6);
+  transform: translateY(-1px);
+}
+.proj-index {
+  min-width: 72px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
+/* Desktop hides the mobile controls */
+@media (min-width: 1024px) {
+  .proj-controls-mobile { display: none; }
+}
+
+/* ===== Hover Popup (desktop only) ===== */
+/* Smaller width, and ellipsis for long items.
+   Disabled on mobile entirely. */
+.roles-popup .content,
+.roles-popup-content {
+  max-width: 280px;        /* a bit smaller */
+  white-space: normal;
+}
+
+.roles-popup-content .roles-popup-title {
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.roles-popup-content ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.roles-popup-content li {
+  margin: 0.2rem 0;
+  line-height: 1.35;
+}
+
+/* Show "..." instead of expanding */
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.roles-hint {
+  margin-top: 0.4rem;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+/* Hide popup on mobile */
+@media (max-width: 1023.98px) {
+  .roles-popup { display: none !important; }
+}

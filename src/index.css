@@ -1,0 +1,16 @@
+html, body, #root {
+  height: 100%;
+  background: #000 !important;     /* hard black */
+  color: #f6f7fb;
+}
+
+:root {
+  --bg: #000;
+  --card:#0a0b12;
+  --text:#f6f7fb;
+  --muted:#b9c1d6;
+  --accent:#3730a3;
+  --accent-2:#c4b5fd;
+  --border:rgba(55,48,163,.38);
+  --ring:rgba(55,48,163,.55);
+}

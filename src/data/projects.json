@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Library Management System (LMS)",
+    "description": "A full-stack web application replicating my college's library system, allowing students to register, search, borrow, and return books online, while administrators manage inventory, users, and overdue records. As the team lead, I coordinated a 4-member team, handled both front-end and back-end development, designed MongoDB schemas, implemented role-based access control, and ensured timely project delivery. Successfully deployed as a working prototype with positive feedback from professors.",
+    "roles_and_achievements": [
+      "Led a 4-member team and coordinated weekly meetings with professors",
+      "Designed and implemented RESTful APIs for books, users, and transactions",
+      "Developed MongoDB schemas using Mongoose",
+      "Integrated Redux for state management",
+      "Implemented JWT authentication with role-based access",
+      "Successfully delivered a functional prototype for the college library",
+      "Received positive feedback from faculty for replicating real-world workflows",
+      "Enhanced leadership and full-stack development skills"
+    ],
+    "github_url": "https://github.com/sreeharinaidu46/library-management-system",
+    "technologies": [
+      "React.js",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Material UI",
+      "Postman",
+      "Git/GitHub"
+    ]
+  },
+  {
+    "title": "TA Management System",
+    "description": "A full-stack system that streamlines university TA workflows: applicants create profiles and submit résumés, instructors post/manage courses and review candidates, and the TA Committee selects final TAs. Built as a monorepo (React + Redux frontend, Node/Express + MongoDB backend) with file uploads, notifications, and role-based views for Applicants, Instructors, and the TA Committee.",
+    "roles_and_achievements": [
+      "Designed core entities and flows across Applicants, Courses, Applications, and Messages",
+      "Implemented résumé uploads via multer with secure static serving from /files",
+      "Built REST APIs for users, courses, applications, and notifications (Express + Mongoose)",
+      "Structured React app by role (Applicant, Instructor, Committee) with Redux state management",
+      "Added instructor messaging/notifications and committee TA selection (ta_selected)",
+      "Set up local dev workflow with nodemon, concurrently, and CRA proxy to the API",
+      "Documented .env configuration and recommended replacing hardcoded Mongo URI with process.env.MONGO_URI",
+      "Improved developer experience with axios action creators, reducers, and a centralized store"
+    ],
+    "github_url": "https://github.com/sreeharinaidu46/ta-management-system",
+    "technologies": [
+      "React 18",
+      "Redux",
+      "Redux-Thunk",
+      "Material UI",
+      "Semantic UI",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Multer",
+      "Axios",
+      "Nodemon",
+      "Concurrently"
+    ]
+  },
+  {
+    "title": "Appointment Booking System",
+    "description": "A full-stack scheduling platform where customers book time slots with approved service providers. Backend is production-ready with Spring Boot (JWT auth, DTO-based responses, layered architecture); React frontend with Redux Toolkit and Tailwind is in active development.",
+    "roles_and_achievements": [
+      "Designed domain models and DB schema for Users/Roles, Providers, Appointments, and BusinessCategory",
+      "Implemented admin approval workflow so only verified providers are visible to customers",
+      "Built JWT-based authentication and authorization with role-based access (ADMIN, PROVIDER, CUSTOMER)",
+      "Developed booking lifecycle APIs: create, edit, cancel, and list appointments",
+      "Standardized responses using DTOs and a ResponseMapper utility for consistent API contracts",
+      "Added enum-driven provider categories and provider profile fields (e.g., agencyImageUrl) for discoverability",
+      "Structured Spring Boot backend into controller/service/repository layers with clear separation of concerns",
+      "Prepared React frontend scaffold with Redux Toolkit, React Router, Axios, and Tailwind for responsive UI"
+    ],
+    "github_url": "https://github.com/sreeharinaidu46/appointment-booking-system",
+    "technologies": [
+      "Java 17",
+      "Spring Boot",
+      "Spring Security (JWT)",
+      "Spring Data JPA (Hibernate)",
+      "MySQL",
+      "Maven",
+      "React.js",
+      "Redux Toolkit",
+      "Axios",
+      "React Router",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "EmotionSense AI",
+    "description": "A multimodal deep learning application that detects human emotions from voice recordings and their text transcriptions. The backend (Flask) serves a TensorFlow/Keras model with Whisper-based transcripts, while a lightweight HTML/CSS/JS frontend animates results with dynamic emojis and background changes for an engaging UX.",
+    "roles_and_achievements": [
+      "Designed the end-to-end multimodal pipeline combining audio features with text transcripts for emotion prediction",
+      "Integrated OpenAI Whisper to transcribe uploaded .wav files and feed the text branch of the model",
+      "Implemented Flask APIs for upload/inference and structured model loading with reusable preprocessing utilities",
+      "Persisted preprocessing artifacts (e.g., audio scaler via Joblib) to ensure consistent inference",
+      "Built a minimal, fast frontend with real-time typing animation, emoji feedback, and dynamic background by emotion",
+      "Authored clear setup/run docs and requirements to enable quick local runs and reproducibility",
+      "Organized the repository with clean separation of templates/static, model assets, and data for maintainability",
+      "Prepared the app for production serving with Gunicorn-compatible entry points"
+    ],
+    "github_url": "https://github.com/sreeharinaidu46/emotionsense-ai",
+    "technologies": [
+      "Python",
+      "Flask",
+      "TensorFlow",
+      "Keras",
+      "OpenAI Whisper",
+      "Librosa",
+      "Scikit-learn",
+      "Joblib",
+      "Pandas",
+      "NumPy",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Gunicorn"
+    ]
+  },
+  {
+    "title": "WeatherApp",
+    "description": "A lightweight React application that fetches and displays current weather by city using the OpenWeather API. Shows temperature, humidity, wind speed, and conditions with a responsive UI for desktop and mobile. Deployed for public access.",
+    "roles_and_achievements": [
+      "Implemented city-based search and current weather retrieval with OpenWeather API",
+      "Displayed key metrics (temperature, humidity, wind speed, description) in a clean, responsive layout",
+      "Configured environment-based API key management via Vite (.env) for safer local development",
+      "Built with TypeScript for stronger typing and fewer runtime errors",
+      "Deployed a production build to Render and validated live functionality across devices",
+      "Set up version control and project workflows with Git and GitHub"
+    ],
+    "live_url": "https://weatherapp-6nhj.onrender.com/",
+    "github_url": "https://github.com/sreeharinaidu46/WeatherApp",
+    "technologies": [
+      "React.js",
+      "TypeScript",
+      "Vite",
+      "CSS",
+      "OpenWeather API",
+      "Git",
+      "GitHub",
+      "Render"
+    ]
+  }
+]
